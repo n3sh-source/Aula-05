@@ -1,1 +1,34 @@
 <h2>Lista</h2>
+<p>
+  A tabela abaixo mostra às matérias que estou cursando no momento na faculdade,
+  junto com o dia da semana e seus horários.
+</p>
+
+<p>
+  Caso queira saber mais sobre as disciplinas basta clickar em cima da matéria
+  desejada que novas informações aparecerão
+</p>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Dia</th>
+    <th>Hoŕario</th>
+  </tr>
+
+  <tr *ngFor="let item of list; index as i">
+    <td>
+      {{ item.id }}
+    </td>
+    <td>
+      <a [routerLink]="['/list', i]">{{ item.nome }}</a>
+    </td>
+    <td>
+      {{ item.dia }}
+    </td>
+    <td>
+      {{ item.hr }}
+    </td>
+  </tr>
+</table>
